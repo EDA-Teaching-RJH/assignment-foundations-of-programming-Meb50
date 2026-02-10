@@ -29,7 +29,7 @@ def run_system_monolith():
         if opt == "1":  
             print("Current Crew List:")
             
-            for i in range(len(n)): #originally stated as for i in range(10), error not solved yet tho
+            for i in range(len(n)): #originally stated as for i in range(10), error not solved yet tho, Sets the range for the for loop as the number of items in the list
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
