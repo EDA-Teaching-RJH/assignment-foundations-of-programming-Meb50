@@ -31,7 +31,7 @@ def run_system_monolith():
             
             for i in range(len(n)): #originally stated as for i in range(10), error not solved yet tho, Sets the range for the for loop as the number of items in the list
                 print(n[i] + " - " + r[i]) 
-                
+
         elif opt == "2":
             new_name = input("Name: ")
             new_rank = input("Rank: ")
@@ -39,6 +39,8 @@ def run_system_monolith():
             
            
             n.append(new_name)
+            r.append(new_rank)
+            d.append(new_div)
             print("Crew member added.")
             
         elif opt == "3":
