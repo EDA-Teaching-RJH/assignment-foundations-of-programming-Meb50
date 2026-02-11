@@ -48,11 +48,18 @@ def run_system_monolith():
             if rem not in n:
                 print("Provided name is not in database")
             else:
-                 idx = n.index(rem)
-                 n.pop(idx)
-                 r.pop(idx)
-                 d.pop(idx)
-                 print("Removed.")
+                 if n.count(rem) > 1:
+                     remr = input("Rank of person to remove: ")
+                     idxr = r.index(remr)
+                     n.pop(idxr)
+                     r.pop(idxr)
+                     d.pop(idxr)
+                 else:
+                     idxn = n.index(rem)
+                     n.pop(idxn)        #trying to get it where if multiple of same name, asks to specify the rank that the name has to remove that specific name 
+                     r.pop(idxn)
+                     d.pop(idxn)       
+                     print("Removed.")
 
             
             
