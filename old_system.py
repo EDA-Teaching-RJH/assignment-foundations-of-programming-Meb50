@@ -50,10 +50,18 @@ def run_system_monolith():
             else:
                  if n.count(rem) > 1:
                      remr = input("Rank of person to remove: ")
-                     idxr = r.index(remr)
-                     n.pop(idxr)
-                     r.pop(idxr)
-                     d.pop(idxr)
+                     for x in range(len(n)):
+                         if n[x] == rem:
+                             Current_rank = r[x]
+                             print(x)
+                             print(Current_rank)
+                             if Current_rank == remr:
+                                  n.pop(x)
+                                  r.pop(x)
+                                  d.pop(x)
+                                  print("Removed.")
+                                  break
+            
                  else:
                      idxn = n.index(rem)
                      n.pop(idxn)        #trying to get it where if multiple of same name, asks to specify the rank that the name has to remove that specific name 
