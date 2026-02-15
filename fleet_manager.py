@@ -79,7 +79,7 @@ def remove_member(n,r,d,id):
         r.pop(idxrem)
         d.pop(idxrem)
         id.pop(idxrem)
-        print("Removed.")
+        print("Removed.") #Removes a member from the list based on the Id provided by the user
 
 
 def update_rank(r,id):
