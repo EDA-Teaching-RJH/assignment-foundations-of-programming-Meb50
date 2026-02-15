@@ -90,7 +90,7 @@ def update_rank(r,id):
 
         idxR = id.index(rankupdate)
         r[idxR] = input("What is the New Rank?: ")
-        print("Rank Updated")
+        print("Rank Updated") #Changes the rank of a current member based on their ID
 
 
 def display_roster():
