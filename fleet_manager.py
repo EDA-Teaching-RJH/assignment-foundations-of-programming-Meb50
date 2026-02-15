@@ -64,7 +64,7 @@ def add_member(Valid_Rank,n,r,d,id):
         else:
             n.append(new_name)
             r.append(new_rank)
-            d.append(new_division)
+            d.append(new_division) 
             id.append(new_id)
             print("Member Added.")
 
