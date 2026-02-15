@@ -34,11 +34,11 @@ def display_menu(Valid_Rank,n,r,d,id):
             case 2:
                 remove_member(n,r,d,id) 
             case 3:
-                update_rank()
+                update_rank(r,id)
             case 4:
-                display_roster()
+                display_roster(n, r, d, id)
             case 5:
-                search_crew()
+                search_crew(n, r, d, id)
             case 6:
                 filter_by_division()
             case 7:
@@ -97,24 +97,23 @@ def display_roster(n,r,d,id):
     for i in range(len(n)):
         print(n[i] + " - " + r[i] + " - " + d[i] + " - " + id[i]) #Displays all info about each member
 
-def search_crew(n,r,d,id): 
+def search_crew(n, r, d, id):
     searched = input("Enter a term to search for: ")
-    if searched in n:
-        print(n[searched] + " - " + r[searched] + " - " + d[searched] + " - " + id[searched])
-    elif searched in r:
-        print(n[searched] + " - " + r[searched] + " - " + d[searched] + " - " + id[searched])
-    elif searched in d:
-        print(n[searched] + " - " + r[searched] + " - " + d[searched] + " - " + id[searched])
-    elif searched in id:
-        print(n[searched] + " - " + r[searched] + " - " + d[searched] + " - " + id[searched])
-    else:
-        print("Invalid Search Term.")
+    found = False
+
+    for i in range(len(n)):
+        if (searched in n[i] or searched in r[i] or searched in d[i] or searched in id[i]):
+
+            print(n[i] + " - " + r[i] + " - " + d[i] + " - " + id[i])
+            found = True
+
+    if not found:
+        print("No matching crew member found.") #Displays all info of members who's info contains a given key search term.
         
 
         
 
-def filter_by_division():
-    pass
+def filter_by_division(n, r, d, id): 
 
 def calculate_payroll():
     pass
