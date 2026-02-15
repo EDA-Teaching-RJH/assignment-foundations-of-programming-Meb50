@@ -66,7 +66,8 @@ def add_member(Valid_Rank,n,r,d,id):
             r.append(new_rank)
             d.append(new_division) 
             id.append(new_id)
-            print("Member Added.")
+            print("Member Added.") #Adds a member to the lists based on information given by the user
+
 
 def remove_member(n,r,d,id):
     idremove = input("ID of member to remove: ")
@@ -116,7 +117,7 @@ Valid_Rank,n,r,d,id = init_database()
 display_menu(Valid_Rank,n,r,d,id)
 
     
-
+ 
 
 
  
