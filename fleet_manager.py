@@ -93,12 +93,25 @@ def update_rank(r,id):
         print("Rank Updated") #Changes the rank of a current member based on their ID
 
 
-def display_roster():
+def display_roster(n,r,d,id):
     for i in range(len(n)):
         print(n[i] + " - " + r[i] + " - " + d[i] + " - " + id[i]) #Displays all info about each member
 
-def search_crew(): 
-    pass
+def search_crew(n,r,d,id): 
+    searched = input("Enter a term to search for: ")
+    if searched in n:
+        print(n[searched] + " - " + r[searched] + " - " + d[searched] + " - " + id[searched])
+    elif searched in r:
+        print(n[searched] + " - " + r[searched] + " - " + d[searched] + " - " + id[searched])
+    elif searched in d:
+        print(n[searched] + " - " + r[searched] + " - " + d[searched] + " - " + id[searched])
+    elif searched in id:
+        print(n[searched] + " - " + r[searched] + " - " + d[searched] + " - " + id[searched])
+    else:
+        print("Invalid Search Term.")
+        
+
+        
 
 def filter_by_division():
     pass
@@ -107,7 +120,7 @@ def calculate_payroll():
     pass
 
 def count_officers():
-    pass
+    pass 
 
 def Quit():
     pass
