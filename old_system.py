@@ -30,7 +30,7 @@ def run_system_monolith():
             print("Current Crew List:")
             
             for i in range(len(n)): #originally stated as for i in range(10), error not solved yet tho, Sets the range for the for loop as the number of items in the list
-                print(n[i] + " - " + r[i]) 
+                print(n[i] + " - " + r[i] + " - " + d[i]) 
 
         elif opt == "2":
             new_name = input("Name: ")
@@ -53,8 +53,6 @@ def run_system_monolith():
                      for x in range(len(n)):
                          if n[x] == rem:
                              Current_rank = r[x]
-                             print(x)
-                             print(Current_rank)
                              if Current_rank == remr:
                                   n.pop(x)
                                   r.pop(x)
