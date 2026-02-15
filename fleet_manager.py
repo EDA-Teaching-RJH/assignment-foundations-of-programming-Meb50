@@ -95,7 +95,7 @@ def update_rank(r,id):
 
 def display_roster():
     for i in range(len(n)):
-        print(n[i] + " - " + r[i] + " - " + d[i] + " - " + id[i])
+        print(n[i] + " - " + r[i] + " - " + d[i] + " - " + id[i]) #Displays all info about each member
 
 def search_crew(): 
     pass
