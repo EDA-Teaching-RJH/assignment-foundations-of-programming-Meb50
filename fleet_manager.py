@@ -45,7 +45,7 @@ def display_menu(Valid_Rank,Valid_Div,n,r,d,id):
             case 7:
                 calculate_payroll(r)
             case 8:
-                count_officers()
+                count_officers(r)
             case 9:
                 Quit()
 
@@ -149,7 +149,11 @@ def calculate_payroll(r):
     print("The Total Cost of the crew is: " + str(total)) #This function assigns a value to each rank and then calculates the total value of the crew
 
 def count_officers(r):
-    pass
+    count = 0           
+    for rank in r:
+        if rank == "Captain" or rank == "Commander": 
+            count = count + 1
+    print("High ranking officers: " + str(count)) #This function calculates how many captains and/or commanders there are and returns the value
 
 def Quit():
     pass
