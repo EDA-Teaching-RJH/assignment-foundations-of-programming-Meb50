@@ -43,7 +43,7 @@ def display_menu(Valid_Rank,Valid_Div,n,r,d,id):
             case 6:
                 filter_by_division(n, r, d, id, Valid_Div)
             case 7:
-                calculate_payroll()
+                calculate_payroll(r)
             case 8:
                 count_officers()
             case 9:
@@ -128,11 +128,28 @@ def filter_by_division(n, r, d, id, Valid_Div):
         print("No members found in that division.") #This function filters and prints members based on their division.
 
 
-def calculate_payroll():
-    pass
+def calculate_payroll(r):
+    total = 0
 
-def count_officers():
-    pass 
+    for rank in r:
+        if rank == "Captain":
+            total += 1000
+        elif rank == "Commander":
+            total += 800
+        elif rank == "Lt.Commander":
+            total += 600
+        elif rank == "Lieutenant":
+            total += 500
+        elif rank == "Lt.Jr Grade":
+            total += 400
+        elif rank == "Ensign":
+            total += 200
+        elif rank == "Cadet":
+            total += 100
+    print("The Total Cost of the crew is: " + str(total)) #This function assigns a value to each rank and then calculates the total value of the crew
+
+def count_officers(r):
+    pass
 
 def Quit():
     pass
