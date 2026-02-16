@@ -48,6 +48,7 @@ def display_menu(Valid_Rank,Valid_Div,n,r,d,id):
                 count_officers(r)
             case 9:
                 Quit()
+                break
 
                 
 
@@ -156,7 +157,8 @@ def count_officers(r):
     print("High ranking officers: " + str(count)) #This function calculates how many captains and/or commanders there are and returns the value
 
 def Quit():
-    pass
+    print("Systems Shutting Down...")
+    return #function quits the program
 
 
 Valid_Rank,n,r,d,id,Valid_Div = init_database()
