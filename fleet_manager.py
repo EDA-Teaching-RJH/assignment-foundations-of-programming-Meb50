@@ -1,15 +1,16 @@
 
 def init_database():
     Valid_Rank = ["Captain", "Commander", "Lt.Commander", "Lieutenant", "Cadet", "Ensign", "Lt.Jr Grade"]
+    Valid_Div = ["Command", "Operations", "Security", "Sciences", "Medical"]
     n = ["Picard", "Riker", "Data", "Worf", "Kirk "]
     r = ["Captain", "Commander", "Lt.Commander", "Lieutenant", "Captain"]
     d = ["Command", "Command", "Operations", "Security", "Command"]
     id = ["0001", "0002", "0003", "0004", "0005"]
-    return Valid_Rank,n,r,d,id
+    return Valid_Rank,n,r,d,id,Valid_Div
 
 init_database()
 
-def display_menu(Valid_Rank,n,r,d,id):
+def display_menu(Valid_Rank,Valid_Div,n,r,d,id):
     print("Systems Booting")
     print("...")
     print("Systems Online")
@@ -40,7 +41,7 @@ def display_menu(Valid_Rank,n,r,d,id):
             case 5:
                 search_crew(n, r, d, id)
             case 6:
-                filter_by_division()
+                filter_by_division(n, r, d, id, Valid_Div)
             case 7:
                 calculate_payroll()
             case 8:
@@ -113,7 +114,19 @@ def search_crew(n, r, d, id):
 
         
 
-def filter_by_division(n, r, d, id): 
+def filter_by_division(n, r, d, id, Valid_Div):
+    div_input = input("Enter Division to filter by: ")
+    found = False
+    if div_input not in Valid_Div:
+        print("Invalid Division.")
+        return
+    for i in range(len(n)):
+        if d[i] == div_input:
+            print(n[i] + " - " + r[i] + " - " + d[i] + " - " + id[i])
+            found = True
+    if not found:
+        print("No members found in that division.") #This function filters and prints members based on their division.
+
 
 def calculate_payroll():
     pass
@@ -125,8 +138,8 @@ def Quit():
     pass
 
 
-Valid_Rank,n,r,d,id = init_database()
-display_menu(Valid_Rank,n,r,d,id)
+Valid_Rank,n,r,d,id,Valid_Div = init_database()
+display_menu(Valid_Rank, Valid_Div,n,r,d,id)
 
     
  
